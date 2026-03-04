@@ -10,21 +10,34 @@ public class MainActivity extends AppCompatActivity {
 
     private int mCounter = 0;
     private TextView myTextView;
+    private TextView tvDepartment; // Added for Part 1
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("ID: 24100031");
         }
 
+
+        tvDepartment = findViewById(R.id.tvDepartment);
+        Button btnChangeName = findViewById(R.id.btnChangeName);
+
+        btnChangeName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tvDepartment.setText("Ms. Angie M. Ceniza-Canillo");
+            }
+        });
+
         myTextView = findViewById(R.id.tvCounter);
         Button btnIncrement = findViewById(R.id.btnIncrement);
 
-        if (savedInstanceState != null) {
-            mCounter = savedInstanceState.getInt("COUNT_KEY");
+
+        if (myTextView != null) {
             myTextView.setText(String.valueOf(mCounter));
         }
 
@@ -36,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
