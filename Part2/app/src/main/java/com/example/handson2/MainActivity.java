@@ -10,12 +10,12 @@ public class MainActivity extends AppCompatActivity {
 
     private int mCounter = 0;
     private TextView myTextView;
-    private TextView tvDepartment; // Added for Part 1
+    private TextView tvDepartment; // Added for Part 1 holds references sa text labels sa layout
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { //standard startup
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main); //connect Java
 
 
         if (getSupportActionBar() != null) {
@@ -24,12 +24,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         tvDepartment = findViewById(R.id.tvDepartment);
-        Button btnChangeName = findViewById(R.id.btnChangeName);
+        Button btnChangeName = findViewById(R.id.btnChangeName); 
 
-        btnChangeName.setOnClickListener(new View.OnClickListener() {
+        btnChangeName.setOnClickListener(new View.OnClickListener() { //listen
             @Override
             public void onClick(View v) {
-                tvDepartment.setText("Ms. Angie M. Ceniza-Canillo");
+                tvDepartment.setText("Ms. Angie M. Ceniza-Canillo"); //update
             }
         });
 
@@ -41,11 +41,11 @@ public class MainActivity extends AppCompatActivity {
             myTextView.setText(String.valueOf(mCounter));
         }
 
-        btnIncrement.setOnClickListener(new View.OnClickListener() {
+        btnIncrement.setOnClickListener(new View.OnClickListener() { //listen
             @Override
             public void onClick(View v) {
-                mCounter++;
-                myTextView.setText(String.valueOf(mCounter));
+                mCounter++; //incremenent
+                myTextView.setText(String.valueOf(mCounter)); //convert num to text
             }
         });
     }
@@ -53,15 +53,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(Bundle outState) { //save state before destroyed
         super.onSaveInstanceState(outState);
-        outState.putInt("COUNT_KEY", mCounter);
+        outState.putInt("COUNT_KEY", mCounter); //pack curr count to bundle
     }
 
     @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+    protected void onRestoreInstanceState(Bundle savedInstanceState) { //runs when the activity restarts
         super.onRestoreInstanceState(savedInstanceState);
-        mCounter = savedInstanceState.getInt("COUNT_KEY");
+        mCounter = savedInstanceState.getInt("COUNT_KEY"); //unpack saved count num and baliok sa screen
         myTextView.setText(String.valueOf(mCounter));
     }
 }
