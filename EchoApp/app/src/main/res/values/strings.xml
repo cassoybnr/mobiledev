@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">EchoApp</string>
+    <string name="app_name">Echo App</string>
+    <string name="hint_message">Type your message here</string>
+    <string name="btn_send">Send Message</string>
+    <string name="label_echo">Echoed Message:</string>
+    <string name="btn_share">Share Message</string>
 </resources>
