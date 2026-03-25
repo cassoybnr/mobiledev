@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- horizontal stack -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp">
-
+<!-- display text on screen -->
     <TextView
         android:id="@+id/tvDepartment"
         android:layout_width="wrap_content"
@@ -14,7 +15,7 @@
         android:text="Your Academic Department"
         android:textSize="20sp"
         android:layout_marginBottom="8dp"/>
-
+<!-- button to change name -->
     <Button
         android:id="@+id/btnChangeName"
         android:layout_width="wrap_content"
@@ -27,7 +28,7 @@
         android:layout_height="1dp"
         android:background="#CCCCCC"
         android:layout_marginBottom="48dp"/>
-
+<!-- display counter num -->
     <TextView
         android:id="@+id/tvCounter"
         android:layout_width="wrap_content"
@@ -36,7 +37,7 @@
         android:textSize="64sp"
         android:textStyle="bold"
         android:layout_marginBottom="32dp"/>
-
+<!-- button counter -->
     <Button
         android:id="@+id/btnIncrement"
         android:layout_width="wrap_content"
