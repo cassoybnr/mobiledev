@@ -3,7 +3,7 @@ package com.example.studybuddy; // Ensure this matches your package name
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.button.Button;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
