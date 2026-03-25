@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">studybuddy</string>
+    <string name="app_name">Study Buddy</string>
+
+    <string name="welcome_msg">Welcome to Study Buddy</string>
+    <string name="btn_get_started">Get Started</string>
+
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_login">Login</string>
+
+    <string name="dash_title">My Dashboard</string>
+    <string name="btn_view_subjects">View Subjects</string>
+    <string name="btn_settings">Settings</string>
 </resources>
